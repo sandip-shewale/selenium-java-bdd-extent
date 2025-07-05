@@ -64,6 +64,7 @@ target/extent-reports/
 target/cucumber-reports.html
 target/screenshots/
 target/surefire-reports/
+test-output/
 
 # Temporary files
 *.tmp
