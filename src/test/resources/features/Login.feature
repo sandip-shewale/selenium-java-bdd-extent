@@ -7,7 +7,7 @@ Feature: Login functionality
     Then I should see <outcome>
 
     Examples:
-      | username | password     | outcome              |
-      | student  | Password123  | the homepage         |
-      | user2    | pass2       | an error message     |
-      | wrong    | wrong       | an error message     | 
+      | username | password    | outcome          |
+      | student  | Password123 | the homepage     |
+      | user2    | pass2       | an error message |
+      | wrong    | wrong       | an error message |
