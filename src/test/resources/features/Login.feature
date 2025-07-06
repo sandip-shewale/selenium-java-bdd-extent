@@ -1,19 +1,13 @@
 Feature: Login functionality
 
-  Scenario: Login with valid credentials
+  Scenario Outline: Login with different credentials
     Given I am on the login page
-    When I enter username "student" and password "Password123"
+    When I enter username "<username>" and password "<password>"
     And I click the login button
-    Then I should see the homepage
+    Then I should see <outcome>
 
-  Scenario: Login with invalid credentials - user2
-    Given I am on the login page
-    When I enter username "user2" and password "pass2"
-    And I click the login button
-    Then I should see an error message
-
-  Scenario: Login with invalid credentials - wrong
-    Given I am on the login page
-    When I enter username "wrong" and password "wrong"
-    And I click the login button
-    Then I should see an error message 
+    Examples:
+      | username | password     | outcome              |
+      | student  | Password123  | the homepage         |
+      | user2    | pass2       | an error message     |
+      | wrong    | wrong       | an error message     | 
